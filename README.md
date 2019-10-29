@@ -3,6 +3,17 @@
 ## Start with a good shell
 https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
 
+## Enable zsh plugins
+
+In your .zshrc file, edit your plugins according to your needs:
+
+```
+plugins=(
+  git
+  docker
+)
+```
+
 ## Create some alias
 
 I used to put my alias and other stuff on a dedicated file, useful when you switch between shell. _Even if I did not switch since I am on zsh..._
