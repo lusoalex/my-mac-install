@@ -13,6 +13,7 @@ According to your needs, install previous version
 brew tap AdoptOpenJDK/openjdk
 brew cask install adoptopenjdk8
 brew cask install adoptopenjdk11
+brew cask install adoptopenjdk13
 ```
 
 ### Add java alias
@@ -24,10 +25,12 @@ In order to easily switch between java version, I add this in my ~/.profile
 export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+export JAVA_13_HOME=$(/usr/libexec/java_home -v13)
 alias java8='export JAVA_HOME=$JAVA_8_HOME'
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
-# default to Java 11
-java11
+alias java13='export JAVA_HOME=$JAVA_13_HOME'
+# default to Java 13
+java13
 ```
 To switch, you just need to type java8 or java11, etc...
 
