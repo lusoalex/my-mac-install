@@ -16,13 +16,16 @@ plugins=(
 
 ## Create some alias
 
-I used to put my alias and other stuff on a dedicated file, useful when you switch between shell. _Even if I did not switch since I am on zsh..._
+zsh provide a lot of alias, have a look to their [Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet).  
+
+I used to put a few more alias and other stuff on a dedicated file, useful when you switch between shell.  
+_Even if I did not switch since I am on zsh..._
 
 ```bash
 touch ~/.profile
 echo "# Add alias" >> ~/.profile
-echo "alias lla=\"ls -la\"" >> ~/.profile
-echo "alias gst=\"git status\"" >> ~/.profile
+#Put this one in comment since I use `la` alias from zsh...
+echo "#alias lla=\"ls -la\"" >> ~/.profile
 ```
 
 In your favorite shell, add this: `source ~/.profile` then refresh
