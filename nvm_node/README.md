@@ -14,9 +14,9 @@ git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-
 Then in your ~/.zshrc, add `zsh-nvm` plugin as below:
 
 ```bash
-# Export nvm completion settings for zsh-nvm plugin 
-# Need to pull git@github.com:lusoalex/zsh-nvm.git for now instead...
+# Enable nvm completion & lazy loading settings for zsh-nvm plugin 
 export NVM_COMPLETION=true
+export NVM_LAZY_LOAD=true
 
 plugins=(
   git
