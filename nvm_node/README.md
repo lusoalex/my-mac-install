@@ -62,3 +62,15 @@ nvm install node
 node --version
 nvm --version
 ```
+
+## Optional bonus - Newman
+
+_Newman is a command line Collection Runner for Postman. It allows you to run and test a Postman Collection directly from the command line._
+
+I oftenly use [Newman](https://learning.postman.com/docs/postman/collection-runs/command-line-integration-with-newman/) for my postman Non Regression Test collections.  
+It is a npm component, so I used to install it by default on my setup...  
+
+```BASH
+# Install newman globaly
+npm install -g newman
+ ```
