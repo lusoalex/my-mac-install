@@ -41,6 +41,20 @@ brew install git
 git --version
 ```
 
+**Tip:** If you are working with developers using Windows, according to this [documentation](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration) then you should run this:
+
+```bash
+git config --global core.autocrlf input
+````
+
+And request developers using Windows to set this:
+```bash
+git config --global core.autocrlf true
+````
+
+*This will unify end of lines in LF mode, please read the official [documentation](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)  for more details.*
+
+
 ## Generate ssh key
 
 ssh-keygen -t rsa -b 4096 -C "email@somewhere.com"
