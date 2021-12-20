@@ -72,11 +72,12 @@ If you have some personal open source projects, do not forget to add your settin
 
 ```XML
   <profiles>
-    ...
-    <!--Allow to download snapshot from the sonatype snapshot repository-->
+    <!--Allow to download snapshot (sonatype and spring snapshot repository)-->
     <profile>
       <id>allow-snapshots</id>
-      <activation><activeByDefault>true</activeByDefault></activation>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <repositories>
         <repository>
           <id>snapshots-repo</id>
@@ -84,7 +85,41 @@ If you have some personal open source projects, do not forget to add your settin
           <releases><enabled>false</enabled></releases>
           <snapshots><enabled>true</enabled></snapshots>
         </repository>
+        <repository>
+          <id>repository.spring.snapshot</id>
+          <name>Spring Snapshot Repository</name>
+          <url>https://repo.spring.io/snapshot</url>
+          <releases><enabled>false</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
       </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>spring-snapshots</id>
+          <url>https://repo.spring.io/snapshot</url>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+
+    <!--Allow to download spring release candidate from the spring repository-->
+    <profile>
+      <id>spring-milestones</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>repository.spring.milestone</id>
+          <name>Spring Milestone Repository</name>
+          <url>https://repo.spring.io/milestone</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>spring-milestones</id>
+          <url>https://repo.spring.io/milestone</url>
+        </pluginRepository>
+      </pluginRepositories>
     </profile>
   </profiles>
 ```
