@@ -1,6 +1,16 @@
 # Docker and Kubernetes Installation
 
+## Option 1: Docker Desktop (individual/education/small business)
+
 Just follow this [link](https://docs.docker.com/docker-for-mac/).
+
+## Option 2: Colima
+
+ - [Install colima](https://github.com/abiosoft/colima)
+ - [Install docker](https://github.com/abiosoft/colima#docker)
+ - [Install kubectl CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#install-with-homebrew-on-macos) _(I did chose brew, but there are other options)_
+
+## ZSH tips
 
 If you are using zsh, you can add **_docker_** and **_kubectl_** plugin as below:
 
