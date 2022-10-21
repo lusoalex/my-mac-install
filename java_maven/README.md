@@ -2,18 +2,20 @@
 
 ## Install java
 
-Install newer version of adoptopenjdk
+### Download and install jdk
 
-```bash
-brew cask install adoptopenjdk
+Go to https://openjdk.org and follow the links.  
+Ex, for java 19 : https://jdk.java.net/19/  
+For older versions, you may need to download them from: https://jdk.java.net/archive/  
+
+Once downloaded, untar them and install into `/Library/Java/JavaVirtualMachines`. 
+
+Folder tree should look like this:
 ```
-
-According to your needs, install previous version
-```bash
-brew tap AdoptOpenJDK/openjdk
-brew cask install adoptopenjdk8
-brew cask install adoptopenjdk11
-brew cask install adoptopenjdk13
+/Library/Java/JavaVirtualMachines  
+ /openjdk-14.0.1.jdk  
+ /jdk-17.jdk  
+ /jdk-19.0.1.jdk
 ```
 
 ### Add java alias
@@ -26,16 +28,17 @@ In order to easily switch between java version, I add this in my ~/.profile
 # Java Settings (list available versions : /usr/libexec/java_home -V)
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
-export JAVA_16_HOME=$(/usr/libexec/java_home -v16)
+export JAVA_14_HOME=$(/usr/libexec/java_home -v14)
 export JAVA_17_HOME=$(/usr/libexec/java_home -v17)
+export JAVA_19_HOME=$(/usr/libexec/java_home -v19)
 export JAVA_HOME=$(/usr/libexec/java_home)
 alias java8='unset JAVA_HOME; export JAVA_HOME=$JAVA_8_HOME'
 alias java11='unset JAVA_HOME; export JAVA_HOME=$JAVA_11_HOME'
-alias java16='unset JAVA_HOME; export JAVA_HOME=$JAVA_15_HOME'
+alias java14='unset JAVA_HOME; export JAVA_HOME=$JAVA_14_HOME'
 alias java17='unset JAVA_HOME; export JAVA_HOME=$JAVA_17_HOME'
-#alias java17='unset JAVA_HOME; export JAVA_HOME=$(/usr/libexec/java_home)'
-# default to Java 17
-java17
+alias java19='unset JAVA_HOME; export JAVA_HOME=$JAVA_19_HOME'
+# default to Java 19
+java19
 ```
 To switch, you just need to type java8 or java11, etc...
 
