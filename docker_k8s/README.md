@@ -1,10 +1,19 @@
 # Docker and Kubernetes Installation
 
-## Option 1: Docker Desktop (individual/education/small business)
+## Docker
+
+There is multiple ways to install docker commands.
+
+### Option 1: Docker Desktop (individual/education/small business)
 
 Just follow this [link](https://docs.docker.com/docker-for-mac/).
 
-## Option 2: Colima
+### Option 2: Rancher Desktop
+
+Rancher Desktop is an alternative to Docker Desktop with no licence risk as employee of a company.  
+Just follow this [link](https://rancherdesktop.io/)
+
+### Option 3: Colima
 
  - [Install colima](https://github.com/abiosoft/colima)
  - [Install docker](https://github.com/abiosoft/colima#docker)
@@ -31,3 +40,9 @@ Edit your .profile to add:
 export KUBECTX_CURRENT_FGCOLOR=$(tput setaf 6) # blue text
 export KUBECTX_CURRENT_BGCOLOR=$(tput setab 7) # white background
 ```
+
+## Kubernetes CLI Interface: K9S
+
+Optionaly you can install a CLI interface for k9s, see this [link](https://k9scli.io/).  
+Useful for cusom skins: _On mac (m1), the config directory is `$HOME/Library/Application\ Support/k9s`._  
+
