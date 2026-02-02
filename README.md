@@ -14,6 +14,19 @@ plugins=(
 )
 ```
 
+## Configure oh my zsh theme
+
+I personally like the powerleve10k theme, to install it:
+
+```bash
+# Add this into you .zshrc
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Add this if not found
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+```
+To re-configure your preferences, you can run this command `p10k configure`
+
 ## Create some alias
 
 zsh provide a lot of alias, have a look to their [Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet).  
