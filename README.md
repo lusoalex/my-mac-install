@@ -83,6 +83,11 @@ Host github.com
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your_email@exemple.com"
+
+# commit signature
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/id_ed_git.pub
+git config --global commit.gpgsign true
 ```
 
 Now add you key in your github account...
