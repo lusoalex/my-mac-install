@@ -62,18 +62,30 @@ ssh-keygen -t rsa -b 4096 -C "email@somewhere.com"
 Here I prefer use a specific file such as id_rsa_git, _**that imply to manage a ssh config:**_
 
 ```bash
+# first create the key
+ssh-keygen -t ed25519 -C "your_email@exemple.com" -f ~/.ssh/id_ed_git
+
 cd ~/.ssh
 touch config
 ```
 with
 
 ```YAML
-#Use specific ssh key for github.com
+# Use specific ssh key for github.com: ssh-keygen -t ed25519 -C "your_email@exemple.com" -f ~/.ssh/id_ed_git
 Host github.com
   HostName github.com
   User git
-  IdentityFile ~/.ssh/id_rsa_git
+  IdentityFile ~/.ssh/id_ed_git
+  AddKeysToAgent yes
+  UseKeychain yes
 ```
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your_email@exemple.com"
+```
+
+Now add you key in your github account...
 
 ## Sign commits
 
