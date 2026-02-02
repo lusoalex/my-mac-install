@@ -1,4 +1,24 @@
-# Install nvm (Node Version Manager)
+# [DEPRECATED] Install nvm (Node Version Manager)
+
+> **_NOTE:_** Deprecated, replaced by `fnl`: https://www.freecodecamp.org/news/fnm-fast-node-manager/
+
+## Install fnm
+
+```bash
+brew install fnm
+```
+
+In the .profile add this:
+
+```bash
+# fnm
+export PATH=/home/$USER/.fnm:$PATH
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
+```
+
+---
+
+> **/!\\** Below section is only for historic, do not follow in newer installation. **/!\\**
 
 I am using nvm to manage node version and switch according the projects...
 
